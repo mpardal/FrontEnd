@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "title_tables",
+  "info": {
+    "singularName": "title-table",
+    "pluralName": "title-tables",
+    "displayName": "TitleTable",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content_table": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::content-table.content-table",
+      "inversedBy": "title_table"
+    },
+    "price_table": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::price-table.price-table",
+      "inversedBy": "title_table"
+    },
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::link.link",
+      "inversedBy": "title_table"
+    }
+  }
+}

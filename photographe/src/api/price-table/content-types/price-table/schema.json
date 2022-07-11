@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "price_tables",
+  "info": {
+    "singularName": "price-table",
+    "pluralName": "price-tables",
+    "displayName": "PriceTable",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "string"
+    },
+    "content_table": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::content-table.content-table",
+      "inversedBy": "price_table"
+    },
+    "title_table": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::title-table.title-table",
+      "mappedBy": "price_table"
+    },
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::link.link",
+      "inversedBy": "price_table"
+    }
+  }
+}
